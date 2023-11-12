@@ -1,6 +1,6 @@
 /*
 1. A user should be able to click on a show and have the details show up on the left.(done)
-2. A user should be able to search for a show.
+2. A user should be able to search for a show.(done)
 3. A user should be able to filter the list of shows by their rating.
 4. A user should be able to display seasons and episodes when a show is selected.
  */
@@ -49,7 +49,11 @@ function App() {
       return s.rating.average >= filterByRating;
     });
   }
-
+  displayShows = displayShows.filter(s => {
+    if (s.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+      return true
+    }
+  })
   return (
     <div>
       <Nav
