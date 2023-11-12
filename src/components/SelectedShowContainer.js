@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import Episode from "./Components/Episode";
+import Episode from "./Episode";
 
 function SelectedShowContainer(props) {
   const selectedSeason = useState(1);
 
   function mapSeasons() {
     if (!!props.episodes) {
-      let seasons = props.episodes.map((e) => e.season).unique();
+      let seasons = props.allEpisodes.map((e) => e.season).unique();
 
       return seasons.map((s) => {
         return (
@@ -19,7 +19,7 @@ function SelectedShowContainer(props) {
   }
 
   function mapEpisodes() {
-    return props.episodes.map((e) => {
+    return props.allEpisodes.map((e) => {
       if (e.season == selectedSeason) {
         return <Episode eachEpisode={e} key={e.id} />;
       }
@@ -48,7 +48,7 @@ function SelectedShowContainer(props) {
   );
 }
 
-export SelectedShowContainer;
+export default SelectedShowContainer;
 
 Array.prototype.unique = function () {
   const arr = [];

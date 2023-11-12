@@ -22,3 +22,4 @@ function Filter(props) {
     </div>
   );
 }
+export default Filter;
