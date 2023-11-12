@@ -1,5 +1,5 @@
 /*
-1. A user should be able to click on a show and have the details show up on the left.
+1. A user should be able to click on a show and have the details show up on the left.(done)
 2. A user should be able to search for a show.
 3. A user should be able to filter the list of shows by their rating.
 4. A user should be able to display seasons and episodes when a show is selected.
