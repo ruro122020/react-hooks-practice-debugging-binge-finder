@@ -1,8 +1,14 @@
 /*
+Core Deliverables:
 1. A user should be able to click on a show and have the details show up on the left.(done)
 2. A user should be able to search for a show.(done)
 3. A user should be able to filter the list of shows by their rating.(done)
-4. A user should be able to display seasons and episodes when a show is selected.
+4. A user should be able to display seasons and episodes when a show is selected.(done)
+All core deliverables are done. 
+
+Bonus:
+1.LAZY LOADING!! Your initial fetch only grabbed the most popular 240 shows on the API. Implement lazy loading to have your application do another fetch once it gets to the bottom of the screen.
+TIP: change your fetch to reflect the page numbers example:
  */
 import React, { useEffect, useState } from "react";
 import { Grid } from "semantic-ui-react";
