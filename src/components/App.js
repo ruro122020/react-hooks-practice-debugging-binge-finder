@@ -1,7 +1,7 @@
 /*
 1. A user should be able to click on a show and have the details show up on the left.(done)
 2. A user should be able to search for a show.(done)
-3. A user should be able to filter the list of shows by their rating.
+3. A user should be able to filter the list of shows by their rating.(done)
 4. A user should be able to display seasons and episodes when a show is selected.
  */
 import React, { useEffect, useState } from "react";
@@ -46,7 +46,7 @@ function App() {
   let displayShows = shows;
   if (filterByRating) {
     displayShows = displayShows.filter((s) => {
-      return s.rating.average >= filterByRating;
+      return s.rating.average >= parseInt(filterByRating);
     });
   }
   displayShows = displayShows.filter(s => {
@@ -58,6 +58,7 @@ function App() {
     <div>
       <Nav
         handleFilter={handleFilter}
+        filterByRating={filterByRating}
         handleSearch={handleSearch}
         searchTerm={searchTerm}
       />

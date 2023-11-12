@@ -6,6 +6,7 @@ function Filter(props) {
       <h4> Filter By Rating </h4>
       <select
         placeholder="Filter by average rating"
+        value={props.filterByRating}
         onChange={props.handleFilter}
       >
         <option>No Filter</option>
